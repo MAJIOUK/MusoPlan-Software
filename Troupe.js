@@ -155,6 +155,44 @@ class Troupe {
         console.log("==============================================================================");
     }
 
+    // calculate troupe deployment cost
+    rateCalculator() {
+
+        let troupeRate = 0;
+        let tname = "";
+        let tduration = "";
+             
+        for (let j = 0; j < this.troupeMusician.length; j++) {
+
+            while(true) {
+                if (this.troupe_name == tname){
+    
+                    if (typeof(tduration) === 'number' && tduration >= 0.5 && tduration <= 3){
+        
+                        this.troupe_duration = tduration;
+                        troupeRate = troupeRate+this.troupeMusician[j].hourlyRate;
+                        break;
+            
+                    }
+                    else {
+                        tduration=Number(prompt('Enter a number as booking duration (between 0.5 to 3 hours): '))
+                    }
+                }
+                else {
+                    tname=prompt('Enter a valid Troupe Name : '); 
+                }                   
+            }
+        }
+    
+        console.log("====================================================================");
+        console.log("Troupe Name: " + this.troupe_name);
+            
+        console.log("Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration);
+        console.log("====================================================================");
+    
+    }
+
+
 }
         
     
