@@ -1,0 +1,14 @@
+Minutes of meeting with MusoPlan representative.
+
+Meeting started at 4 pm on July 27 2022 to discuss the requirements of the MusoPlan software for assigning musicians to a music troupe and also to calculate the cost of deploying any troupe based on the musicians comprising the troupe.
+
+In this meeting, the representative clarified the following requirements as regards to creating a musician and a troupe:
+
+For a musician: Any musician name should be between 3 and 30 characters, must play one of four instruments listed (flute, bass, percussion, or guitar), must have a positive year of experience playing an instrument and the hourly rate must be more than 50 AUD.
+
+For a troupe: troupe name must include between 3 to 30 characters, only a maximum of five musicians can go into a troupe, the genre of a troupe must be chosen between rock, jazz or pop and a trope can only perform for between 30 mins to 3 hours.
+
+It was also  highlighted that to introduce any  musician, the instrument used by the musician must be include. An interesting fact must also be stated about the musician.
+
+on this note, the meeting was concluded at 4:15 pm on the same day with windows for communication open for any clarification that may be necessary.
+
