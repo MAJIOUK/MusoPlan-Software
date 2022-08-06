@@ -173,3 +173,5 @@ function addMusicianToTroupe()
         }
     }
 }
+
+module.exports={addMusician,addTroupe,getMusicianList,getTroupeList,addMusicianToTroupe}
