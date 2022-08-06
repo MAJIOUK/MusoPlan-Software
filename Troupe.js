@@ -193,6 +193,73 @@ class Troupe {
     }
 
 
+    //method to write to file troupe details
+    writeTroupeDetails() {
+        let troupeRate = 0;
+
+        let guitaristCount = 0;
+        let bassistCount = 0;
+        let percussionistCount = 0; 
+        let flautistCount = 0;
+
+        let addedMusicians = new Set();
+        let line1 = ("===============================================================");
+        let trpName = "Troupe Name: " + this.troupe_name;
+        let trpGenre = "Troupe Genre: " + this.music_genre;
+
+        writeFileSync('./TroupeDetails.txt',line1+'\n' + trpName+'\n' + trpGenre+'\n', { flag: 'w' });
+        
+        for (let j = 0; j < this.troupeMusician.length; j++) {
+            
+            addedMusicians = addedMusicians.add(this.troupeMusician[j].musicianName)              
+            
+        }
+
+        let nameOfMusInTroupe = "Names of musicians in the troupe: " +Array.from(addedMusicians);
+        let Interestfact = "Interesting fact: " + this.troupeMusician[j].intFact;
+        writeFileSync('./TroupeDetails.txt',nameOfMusInTroupe+'\n' + Interestfact+'\n', { flag: 'a' });
+
+        for (let j = 0; j < this.troupeMusician.length; j++) {
+
+            let MusIntro = "Musician Intro: " + this.troupeMusician[j].musicianIntro;
+            writeFileSync('./TroupeDetails.txt',MusIntro+'\n', { flag: 'a' });
+            
+            troupeRate = troupeRate+this.troupeMusician[j].hourlyRate
+
+            if (this.troupeMusician[j].instrumentalist=="guitarist"){
+                let j = 1;
+                guitaristCount = guitaristCount + j
+            }
+            if (this.troupeMusician[j].instrumentalist=="bassist"){
+                let j = 1;
+                bassistCount = bassistCount + j
+            }
+            if (this.troupeMusician[j].instrumentalist=="percussionist"){
+                let j = 1;
+                percussionistCount = percussionistCount + j
+            }
+            if (this.troupeMusician[j].instrumentalist=="flautist"){
+                let j = 1;
+                flautistCount = flautistCount + j
+            }              
+        }
+        
+        let NoOfGui = "No of Guitarist: " +guitaristCount;
+        let NoOfBas = "No of Bassist: " +bassistCount;
+        let NoOfPer = "No of Percussionist: " +percussionistCount;
+        let NoOfFlau ="No of Flautist: " +flautistCount;
+        let TotMus = "Total no. of musicians: " +addedMusicians.size;
+        let BkTime = "Booking Duration (hrs): " + this.troupe_duration;
+        let TrRate = "Troupe hourly rate (AUD): "+troupeRate;
+        let DepCost = "Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration;
+        const fileContent = readFileSync('./TroupeList.txt','utf8');
+        let line2 = "==============================================================================";
+
+        writeFileSync('./TroupeDetails.txt',NoOfGui+'\n' + NoOfBas+'\n' + NoOfPer+'\n' + NoOfFlau+'\n' + TotMus+'\n' + BkTime+'\n' + TrRate+'\n' + DepCost+'\n' + fileContent+'\n' + line2+'\n', { flag: 'a' });
+
+        
+    }   
+
 }
         
     
