@@ -137,3 +137,8 @@ function addTroupe(){
 
     troupeList.push(trou);
 }
+
+//function to fetch troupe list
+function getTroupeList(){
+    return troupeList;
+}
