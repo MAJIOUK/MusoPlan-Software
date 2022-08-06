@@ -92,3 +92,48 @@ function addMusician(){
 function getMusicianList(){
     return musicianList;
 }
+
+//function to define a troupe and compile troupe list
+function addTroupe(){
+
+    let tname = "";
+    let tduration = "";
+    let genre = "";
+    
+    while(true)
+    {
+        if(tname.length > 3 && tname.length < 30)
+        {
+            if(tduration >= 0.5 && tduration <= 3)
+            {
+                if(genre.toLowerCase()=="rock" || genre.toLowerCase()=="jazz" || genre.toLowerCase()=="pop")
+                {
+                    break;           
+                }
+                else
+                {
+                    console.log('================================================================');
+                    console.log('Select music genre:');
+                    console.log('\tValid genre types\n\t- rock\n\t- jazz\n\t- pop');
+                    genre=prompt('type in a genre from the list above: ');
+                }
+            }
+            else
+            {
+                tduration=Number(prompt('Enter booking duration (between 0.5 to 3 hours): '));
+            } 
+
+        }
+        else 
+        {
+            tname=prompt('Enter troupe name (between 3 to 30 characters): ');
+        }
+    }
+
+    const trou=new Troupe();
+    trou.troupeName=tname;
+    trou.troupeDuration=tduration;
+    trou.musicGenre=genre;
+
+    troupeList.push(trou);
+}
