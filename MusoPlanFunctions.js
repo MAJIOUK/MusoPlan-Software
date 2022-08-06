@@ -142,3 +142,34 @@ function addTroupe(){
 function getTroupeList(){
     return troupeList;
 }
+
+//function to add a musician to a troupe
+function addMusicianToTroupe()
+{
+    let tname=prompt('Enter Troupe Name : ');
+    let mus_name=prompt('Enter Musician Name : ');
+    
+    let Musician="";
+
+    for(let x=0;x<musicianList.length;x++)
+    {
+        if(musicianList[x].musicianName==mus_name)
+        {
+            if (x <5) {
+            Musician=musicianList[x];
+            }
+            else {
+                console.log("Maximum number of musicians reached, add to another troupe")
+                choice = 3;
+            }
+        }
+    }
+    
+    for(let i=0;i<troupeList.length;i++)
+    {
+        if(troupeList[i].troupeName==tname && Musician!="")
+        {
+            troupeList[i].addMusician(Musician);
+        }
+    }
+}
