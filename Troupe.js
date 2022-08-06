@@ -38,6 +38,11 @@ class Troupe {
         return this.music_genre;
     }
 
+    //Add Musicians to Troupe 
+    addMusician(Musician) {
+        this.troupeMusician.push(Musician);
+    }
+
 }
         
     
