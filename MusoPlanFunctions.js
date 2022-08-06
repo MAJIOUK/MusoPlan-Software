@@ -87,3 +87,8 @@ function addMusician(){
 
     musicianList.push(mus);
 }
+
+//function to fetch musician list
+function getMusicianList(){
+    return musicianList;
+}
