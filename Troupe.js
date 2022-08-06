@@ -261,5 +261,7 @@ class Troupe {
     }   
 
 }
+
+module.exports = { Troupe };
         
     
