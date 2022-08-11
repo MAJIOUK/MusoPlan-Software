@@ -86,6 +86,18 @@ function addMusician(){
     mus.interesting_fact = fact;
 
     musicianList.push(mus);
+
+    for(let x=0;x<musicianList.length;x++)
+    {  
+        if(x>0)
+        {
+            if(musicianList[x-1].musicianName==mus.musicianName && musicianList[x-1].instrumentalist==mus.instrumentalist && musicianList[x-1].careerLength==mus.careerLength)
+            {
+                musicianList.pop(mus);
+                console.log("musician already exists, please create another musician");
+            }
+        }          
+    }
 }
 
 //function to fetch musician list
@@ -136,6 +148,18 @@ function addTroupe(){
     trou.musicGenre=genre;
 
     troupeList.push(trou);
+
+    for(let x=0;x<troupeList.length;x++)
+    {  
+        if(x>0)
+        {
+            if(troupeList[x-1].troupeName==trou.troupeName)
+            {
+                troupeList.pop(trou);
+                console.log("Troupe name already exists! Please create a troupe with a different name.");
+            }
+        }          
+    }
 }
 
 //function to fetch troupe list
