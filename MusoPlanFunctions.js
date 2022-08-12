@@ -39,25 +39,29 @@ function addMusician(){
                     if(musicianType.toLowerCase()=="guitarist")
                     {
                         const musFact = new guitarist();
-                        fact = musFact.displayInterestingFact();;
+                        fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="bassist")
                     {
                         const musFact = new bassist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="percussionist")
                     {
                         const musFact = new percussionist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="flautist")
                     {
                         const musFact = new flautist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                 }
@@ -128,6 +132,7 @@ function addTroupe(){
                     console.log('Select music genre:');
                     console.log('\tValid genre types\n\t- rock\n\t- jazz\n\t- pop');
                     genre=prompt('type in a genre from the list above: ');
+                    console.log('Troupe created successfully')
                 }
             }
             else
@@ -183,7 +188,7 @@ function addMusicianToTroupe()
             Musician=musicianList[x];
             }
             else {
-                console.log("Maximum number of musicians reached, add to another troupe")
+                console.log("Maximum number of musicians reached, add musician to another troupe")
                 choice = 3;
             }
         }
@@ -194,6 +199,7 @@ function addMusicianToTroupe()
         if(troupeList[i].troupeName==tname && Musician!="")
         {
             troupeList[i].addMusician(Musician);
+            console.log('Musician added successfully')
         }
     }
 }
