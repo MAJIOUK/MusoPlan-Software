@@ -109,6 +109,11 @@ function getMusicianList(){
     return musicianList;
 }
 
+//function to display just created musician
+function displayCreatedMusician(){
+    return musicianList[musicianList.length-1];
+}
+
 //function to define a troupe and compile troupe list
 function addTroupe(){
 
@@ -172,6 +177,11 @@ function getTroupeList(){
     return troupeList;
 }
 
+//function to fetch just created troupe
+function displayCreatedTroupe(){
+    return troupeList[troupeList.length-1];
+}
+
 //function to add a musician to a troupe
 function addMusicianToTroupe()
 {
@@ -204,4 +214,4 @@ function addMusicianToTroupe()
     }
 }
 
-module.exports={addMusician,addTroupe,getMusicianList,getTroupeList,addMusicianToTroupe}
+module.exports={addMusician,addTroupe,getMusicianList,getTroupeList,addMusicianToTroupe,displayCreatedMusician,displayCreatedTroupe}
