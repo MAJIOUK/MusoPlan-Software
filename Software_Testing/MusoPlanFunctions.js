@@ -172,6 +172,7 @@ function addMusicianToTroupe()
 {
     let tname=prompt('Enter Troupe Name : ');
     let mus_name=prompt('Enter Musician Name : ');
+    let musicianType=prompt('Enter the type of musician: ')
     
     let Musician="";
 
@@ -194,6 +195,14 @@ function addMusicianToTroupe()
         if(troupeList[i].troupeName==tname && Musician!="")
         {
             troupeList[i].addMusician(Musician);
+        }
+        else if (troupeList[i].troupeName!=tname)
+        {
+            console.log("The troupe chosen doesn't exist! Please create troupe.");
+        }
+        else if (Musician=="")
+        {
+            console.log("The musician chosen doesn't exist! Please create musician.");
         }
     }
 }
