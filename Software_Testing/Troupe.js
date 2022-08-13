@@ -25,7 +25,8 @@ class Troupe {
         }
         else
         {
-            throw new Error('troupe name must have between 3 to 30 characters!');
+            this.troupe_name = "troupe name must have between 3 to 30 characters!"
+            return this.troupe_name;
         }    
     }
     get troupeName() 
@@ -35,17 +36,18 @@ class Troupe {
 
     set troupeDuration(tDuration) 
     {
-        if (tname.length > 3 && tname.length < 30)
+        if (tDuration >= 0.5 && tDuration <= 3)
         {
             this.troupe_duration = tDuration;
         }
         else
         {
-            throw new Error('troupe minimum duration must be between 0.5 to 3 hours!');
+            this.troupe_duration = 'troupe minimum duration must be between 0.5 to 3 hours!'
+            return this.troupe_duration;
         }   
     }
     get troupeDuration() {
-        return tDuration;
+        return this.troupe_duration;
     }
 
     set musicGenre(mGenre)
@@ -53,6 +55,11 @@ class Troupe {
         if(mGenre.toLowerCase()=="rock" || mGenre.toLowerCase()=="jazz" || mGenre.toLowerCase()=="pop")
         {
             this.music_genre=mGenre;
+        }
+        else
+        {
+            this.music_genre = 'genre should be from pop, rock or jazz!'
+            return this.music_genre;
         }   
     }
     get musicGenre()
@@ -93,13 +100,13 @@ class Troupe {
 
         //print troupe name and genre to console
         console.log("===============================================================");
-        console.log("Troupe Name: " + this.troupe_name);
-        console.log("Troupe Genre: " + this.music_genre);
+        return("Troupe Name: " + this.troupe_name);
+        return("Troupe Genre: " + this.music_genre);
         
        //loop to introduce each musician, rate, instrumentalist count per loop
         for (let j = 0; j < this.troupeMusician.length; j++) {
 
-            console.log("Interesting fact: " + this.troupeMusician[j].intFact);
+            return("Interesting fact: " + this.troupeMusician[j].intFact);
             
             troupeRate = troupeRate+this.troupeMusician[j].hourlyRate
 
@@ -122,12 +129,12 @@ class Troupe {
             }              
         }
         
-        console.log("No of Guitarist: " +guitaristCount);
-        console.log("No of Bassist: " +bassistCount);
-        console.log("No of Percussionist: " +percussionistCount);
-        console.log("No of Flautist: " +flautistCount);
-        console.log("Booking Duration (hrs): " + this.troupe_duration);
-        console.log("Troupe hourly rate (AUD): "+troupeRate);
+        return("No of Guitarist: " +guitaristCount);
+        return("No of Bassist: " +bassistCount);
+        return("No of Percussionist: " +percussionistCount);
+        return("No of Flautist: " +flautistCount);
+        return("Booking Duration (hrs): " + this.troupe_duration);
+        return("Troupe hourly rate (AUD): "+troupeRate);
         console.log("==============================================================================");
     }
 
@@ -187,9 +194,9 @@ class Troupe {
         console.log("No of Percussionist: " +percussionistCount);
         console.log("No of Flautist: " +flautistCount);
         console.log("Total no. of musicians: " +addedMusicians.size);
-        console.log("Booking Duration (hrs): " + this.troupe_duration);
-        console.log("Troupe hourly rate (AUD): "+troupeRate);
-        console.log("Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration);
+        return("Booking Duration (hrs): " + this.troupe_duration);
+        return("Troupe hourly rate (AUD): "+troupeRate);
+        return("Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration);
         console.log("==============================================================================");
     }
 
@@ -222,11 +229,11 @@ class Troupe {
             }
         }
     
-        console.log("====================================================================");
-        console.log("Troupe Name: " + this.troupe_name);
+        return("====================================================================");
+        return("Troupe Name: " + this.troupe_name);
             
-        console.log("Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration);
-        console.log("====================================================================");
+        return("Cost of troupe deployment (AUD): "+troupeRate*this.troupe_duration);
+        return("====================================================================");
     
     }
 

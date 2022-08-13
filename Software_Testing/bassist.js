@@ -6,6 +6,7 @@ class bassist{
     }
     displayInterestingFact()
     {
+        
         return ("Everyone loves a bassist");
         
     }

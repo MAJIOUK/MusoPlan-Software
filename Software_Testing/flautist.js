@@ -6,7 +6,7 @@ class flautist{
     }
     displayInterestingFact()
     {
-        return( "1989 heavy metal instrument of the year" );
+        return("1989 heavy metal instrument of the year");
         
     }
 }

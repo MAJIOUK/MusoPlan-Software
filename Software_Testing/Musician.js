@@ -24,7 +24,7 @@ class Musician{
         else
         {
             this.musician_name='Musician name must have between 3 to 30 characters!'
-            return this.musician;
+            return this.musician_name;
         }    
     }
     get musicianName()
@@ -34,7 +34,7 @@ class Musician{
 
     set musicianIntro(mus_intro)
     {
-        this.musician_introduction=mus_intro;
+        this.musician_introduction=this.musician_name+" is a "+this.instrument;
     }
     get musicianIntro()
     {
@@ -49,7 +49,8 @@ class Musician{
         }
         else
         {
-            throw new Error ('hourly rate must be above 50!');
+            this.hourly_Rate='hourly rate must be > 50!'
+            return this.hourly_Rate;
         }           
     }
     get hourlyRate()
@@ -81,7 +82,8 @@ class Musician{
         }
         else
         {
-            throw new Error ('Enter a valid musician type!');
+            this.interesting_fact='Enter a valid musician type!'
+            return this.interesting_fact;
         }    
     }
     get intFact()
@@ -97,7 +99,8 @@ class Musician{
         }
         else
         {
-            throw new Error ('enter a valid musician type from these list [bassist, flautist, guitarist, percussionist]!');
+            this.instrument='Musician type must be from bassist, flautist, guitarist or percussionist!'
+            return this.instrument;
         }   
     }
     get instrumentalist()
