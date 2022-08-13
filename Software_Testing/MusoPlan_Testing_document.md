@@ -77,8 +77,8 @@ Type "4" from the menu presented and press enter, you should be prompted to prov
 
 Below shows the CLI snapshot of testing result from jest:
 
-(./images/pic1.JPG)
+!(./images/pic1.JPG)
 
-(./images/pic2.JPG)
+!(./images/pic2.JPG)
 
 The .xml file is also attached
