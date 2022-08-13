@@ -31,12 +31,14 @@ while(true)
     {
         //option to create a musician
         programFunctions.addMusician();
+        console.log(programFunctions.displayCreatedMusician());
         choice=0;
     }
     else if(choice==2)
     {
         //option to create a troupe
         programFunctions.addTroupe();
+        console.log(programFunctions.displayCreatedTroupe());
         choice=0;
     }
     else if(choice==3)

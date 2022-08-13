@@ -39,25 +39,29 @@ function addMusician(){
                     if(musicianType.toLowerCase()=="guitarist")
                     {
                         const musFact = new guitarist();
-                        fact = musFact.displayInterestingFact();;
+                        fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="bassist")
                     {
                         const musFact = new bassist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="percussionist")
                     {
                         const musFact = new percussionist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                     else if(musicianType.toLowerCase()=="flautist")
                     {
                         const musFact = new flautist();
                         fact = musFact.displayInterestingFact();
+                        console.log('Musician created successfully')
                         break;
                     }
                 }
@@ -105,6 +109,11 @@ function getMusicianList(){
     return musicianList;
 }
 
+//function to display just created musician
+function displayCreatedMusician(){
+    return musicianList[musicianList.length-1];
+}
+
 //function to define a troupe and compile troupe list
 function addTroupe(){
 
@@ -128,6 +137,7 @@ function addTroupe(){
                     console.log('Select music genre:');
                     console.log('\tValid genre types\n\t- rock\n\t- jazz\n\t- pop');
                     genre=prompt('type in a genre from the list above: ');
+                    console.log('Troupe created successfully')
                 }
             }
             else
@@ -167,6 +177,11 @@ function getTroupeList(){
     return troupeList;
 }
 
+//function to fetch just created troupe
+function displayCreatedTroupe(){
+    return troupeList[troupeList.length-1];
+}
+
 //function to add a musician to a troupe
 function addMusicianToTroupe()
 {
@@ -184,7 +199,7 @@ function addMusicianToTroupe()
             Musician=musicianList[x];
             }
             else {
-                console.log("Maximum number of musicians reached, add to another troupe")
+                console.log("Maximum number of musicians reached, add musician to another troupe")
                 choice = 3;
             }
         }
@@ -198,13 +213,13 @@ function addMusicianToTroupe()
         }
         else if (troupeList[i].troupeName!=tname)
         {
-            console.log("The troupe chosen doesn't exist! Please create troupe.");
+            console.log("The troupe chosen doesn't exist! Please create troupe/ choose a valid troupe.");
         }
         else if (Musician=="")
         {
-            console.log("The musician chosen doesn't exist! Please create musician.");
+            console.log("The musician chosen doesn't exist! Please create musician/choose a valid mucician.");
         }
     }
 }
 
-module.exports={addMusician,addTroupe,getMusicianList,getTroupeList,addMusicianToTroupe}
+module.exports={addMusician,addTroupe,getMusicianList,getTroupeList,addMusicianToTroupe,displayCreatedMusician,displayCreatedTroupe}

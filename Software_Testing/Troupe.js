@@ -40,7 +40,23 @@ class Troupe {
 
     //Add Musicians to Troupe 
     addMusician(Musician) {
+
         this.troupeMusician.push(Musician);
+
+        for (let j = 0; j < this.troupeMusician.length; j++) {
+
+            if(j>0)
+            {
+                if (this.troupeMusician[j-1].musicianName==Musician.musicianName && this.troupeMusician[j-1].instrumentalist==Musician.instrumentalist)
+                {
+                    this.troupeMusician.pop(Musician)
+                    console.log("This musician already exists in the selected troupe")
+                    return;
+                }
+            }           
+        }
+        console.log('Musician added successfully')
+        
     }
 
 
