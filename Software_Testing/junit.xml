@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="37" failures="0" errors="0" time="5.12">
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-08-13T11:49:04" time="2.533" tests="23">
+    <testcase classname=" Test musician name for 3 to 30 charactoer" name=" Test musician name for 3 to 30 charactoer" time="0.009">
+    </testcase>
+    <testcase classname=" Test musician name for 3 to 30 charactoer" name=" Test musician name for 3 to 30 charactoer" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician name for 3 to 30 charactoer" name=" Test musician name for 3 to 30 charactoer" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician name for 3 to 30 charactoer" name=" Test musician name for 3 to 30 charactoer" time="0.002">
+    </testcase>
+    <testcase classname=" Test musician&apos;s years of playing" name=" Test musician&apos;s years of playing" time="0.002">
+    </testcase>
+    <testcase classname=" Test musician&apos;s years of playing" name=" Test musician&apos;s years of playing" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician&apos;s years of playing" name=" Test musician&apos;s years of playing" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician&apos;s years of playing" name=" Test musician&apos;s years of playing" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.002">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+    <testcase classname=" Test interesting fact" name=" Test interesting fact" time="0.001">
+    </testcase>
+    <testcase classname=" Test interesting fact" name=" Test interesting fact" time="0.001">
+    </testcase>
+    <testcase classname=" Test interesting fact" name=" Test interesting fact" time="0">
+    </testcase>
+    <testcase classname=" Test interesting fact" name=" Test interesting fact" time="0.002">
+    </testcase>
+    <testcase classname=" Test interesting fact" name=" Test interesting fact" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.007">
+    </testcase>
+    <testcase classname=" Test number of playing years" name=" Test number of playing years" time="0.001">
+    </testcase>
+    <testcase classname=" Test musician type" name=" Test musician type" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-08-13T11:49:04" time="2.802" tests="14">
+    <testcase classname=" Test troupe name for 3 to 30 characters" name=" Test troupe name for 3 to 30 characters" time="0.008">
+    </testcase>
+    <testcase classname=" Test troupe name for 3 to 30 characters" name=" Test troupe name for 3 to 30 characters" time="0">
+    </testcase>
+    <testcase classname=" Test troupe name for 3 to 30 characters" name=" Test troupe name for 3 to 30 characters" time="0">
+    </testcase>
+    <testcase classname=" Test troupe name for 3 to 30 characters" name=" Test troupe name for 3 to 30 characters" time="0.001">
+    </testcase>
+    <testcase classname=" Test troupe booking time should be between 0.5 to 3 hours" name=" Test troupe booking time should be between 0.5 to 3 hours" time="0.001">
+    </testcase>
+    <testcase classname=" Test troupe booking time should be between 0.5 to 3 hours" name=" Test troupe booking time should be between 0.5 to 3 hours" time="0.001">
+    </testcase>
+    <testcase classname=" Test troupe booking time should be between 0.5 to 3 hours" name=" Test troupe booking time should be between 0.5 to 3 hours" time="0.002">
+    </testcase>
+    <testcase classname=" Test troupe booking time should be between 0.5 to 3 hours" name=" Test troupe booking time should be between 0.5 to 3 hours" time="0.001">
+    </testcase>
+    <testcase classname=" Test music genre" name=" Test music genre" time="0.001">
+    </testcase>
+    <testcase classname=" Test music genre" name=" Test music genre" time="0.001">
+    </testcase>
+    <testcase classname=" Test music genre" name=" Test music genre" time="0.002">
+    </testcase>
+    <testcase classname=" Test music genre" name=" Test music genre" time="0.001">
+    </testcase>
+    <testcase classname=" Testing add musician to troupeMusician" name=" Testing add musician to troupeMusician" time="0.003">
+    </testcase>
+    <testcase classname=" Testing add musician to troupeMusician" name=" Testing add musician to troupeMusician" time="0.242">
+    </testcase>
+  </testsuite>
+</testsuites>
