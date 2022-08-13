@@ -23,7 +23,7 @@ class Musician{
         }
         else
         {
-            throw new Error('Musician name must have between 3 to 30 characters!');
+            throw new Error ('Musician name must have between 3 to 30 characters!');
         }    
     }
     get musicianName()
@@ -48,7 +48,7 @@ class Musician{
         }
         else
         {
-            throw new Error('hourly rate must be above 50!');
+            throw new Error ('hourly rate must be above 50!');
         }           
     }
     get hourlyRate()
@@ -80,7 +80,7 @@ class Musician{
         }
         else
         {
-            throw new Error('Enter a valid musician type!');
+            throw new Error ('Enter a valid musician type!');
         }    
     }
     get intFact()
@@ -96,7 +96,7 @@ class Musician{
         }
         else
         {
-            throw new Error('enter a valid musician type from these list [bassist, flautist, guitarist, percussionist]!');
+            throw new Error ('enter a valid musician type from these list [bassist, flautist, guitarist, percussionist]!');
         }   
     }
     get instrumentalist()
