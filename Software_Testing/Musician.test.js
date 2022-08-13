@@ -8,7 +8,7 @@ const {Troupe}=require('./Troupe.js');
 test('Test musician name for 3 to 30 charactoer',()=>{
     musician = new Musician();
     musician.musicianName='san';// setting the value
-    expect(musician.musicianName).toEqual('san');// geting the value
+    expect(musician.musicianName).toEqual('Musician name must have between 3 to 30 characters!');// geting the value
 })
 
 test('Test musician name for 3 to 30 charactoer',()=>{
@@ -27,5 +27,5 @@ test('Test musician name for 3 to 30 charactoer',()=>{
    /* expect(() => {*/
     musician = new Musician();
     musician.musicianName='sa';// setting the value
-    expect(musician.musicianName).toMatch('sandilicious');// geting the value
+    expect(musician.musicianName).toMatch('Musician name must have between 3 to 30 characters!');// geting the value
 })

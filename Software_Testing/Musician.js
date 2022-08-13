@@ -23,7 +23,8 @@ class Musician{
         }
         else
         {
-            return ('Musician name must have between 3 to 30 characters!');
+            this.musician_name='Musician name must have between 3 to 30 characters!'
+            return this.musician;
         }    
     }
     get musicianName()
