@@ -23,7 +23,7 @@ class Musician{
         }
         else
         {
-            throw new Error ('Musician name must have between 3 to 30 characters!');
+            return ('Musician name must have between 3 to 30 characters!');
         }    
     }
     get musicianName()

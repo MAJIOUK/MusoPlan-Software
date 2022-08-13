@@ -24,8 +24,8 @@ test('Test musician name for 3 to 30 charactoer',()=>{
 })
 
 test('Test musician name for 3 to 30 charactoer',()=>{
-    expect(() => {
+   /* expect(() => {*/
     musician = new Musician();
     musician.musicianName='sa';// setting the value
-    }).toThrowError('Musician name must have between 3 to 30 characters');
+    expect(musician.musicianName).toMatch('sandilicious');// geting the value
 })
