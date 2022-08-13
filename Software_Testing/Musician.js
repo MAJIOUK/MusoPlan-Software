@@ -1,3 +1,8 @@
+const {guitarist}=require('./guitarist.js');
+const {bassist}=require('./bassist.js');
+const {percussionist}=require('./percussionist.js');
+const {flautist}=require('./flautist.js');
+
 //defining the musician class
 class Musician{
 
@@ -12,7 +17,14 @@ class Musician{
 
     set musicianName(mname)
     {
-        this.musician_name=mname
+        if (mname.length > 3 && mname.length < 30)
+        {
+            this.musician_name=mname;
+        }
+        else
+        {
+            throw new Error('Musician name must have between 3 to 30 characters!');
+        }    
     }
     get musicianName()
     {
@@ -30,16 +42,46 @@ class Musician{
 
     set hourlyRate(hRate)
     {
-        this.hourly_Rate=hRate;
+        if(hRate > 50)
+        {
+            this.hourly_Rate=hRate;
+        }
+        else
+        {
+            throw new Error('hourly rate must be above 50!');
+        }           
     }
     get hourlyRate()
     {
         return this.hourly_Rate;
     }
 
-    set intFact(int_fact)
+    set intFact(instru_type)
     {
-        this.interesting_fact=int_fact;
+        if(instru_type.toLowerCase()=="guitarist")
+        {
+            const musFact = new guitarist();
+            this.interesting_fact = musFact.displayInterestingFact();;
+        }
+        else if(instru_type.toLowerCase()=="bassist")
+        {
+            const musFact = new bassist();
+            this.interesting_fact = musFact.displayInterestingFact();
+        }
+        else if(instru_type.toLowerCase()=="percussionist")
+        {
+            const musFact = new percussionist();
+            this.interesting_fact = musFact.displayInterestingFact();
+        }
+        else if(instru_type.toLowerCase()=="flautist")
+        {
+            const musFact = new flautist();
+            this.interesting_fact = musFact.displayInterestingFact();
+        }
+        else
+        {
+            throw new Error('Enter a valid musician type!');
+        }    
     }
     get intFact()
     {
@@ -48,7 +90,14 @@ class Musician{
 
     set instrumentalist(instru_type)
     {
-        this.instrument=instru_type;
+        if (instru_type=="bassist" || instru_type=="flautist"|| instru_type=="guitarist"|| instru_type=="percussionist")
+        {
+            this.instrument=instru_type;
+        }
+        else
+        {
+            throw new Error('enter a valid musician type from these list [bassist, flautist, guitarist, percussionist]!');
+        }   
     }
     get instrumentalist()
     {

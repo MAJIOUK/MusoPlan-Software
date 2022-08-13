@@ -17,21 +17,43 @@ class Troupe {
 
     troupeMusician = new Array();
 
-    set troupeName(tname) {
-        this.troupe_name = tname;
+    set troupeName(tname)
+    {
+        if (tname.length > 3 && tname.length < 30)
+        {
+            this.troupe_name = tname;
+        }
+        else
+        {
+            throw new Error('troupe name must have between 3 to 30 characters!');
+        }    
     }
-    get troupeName() {
+    get troupeName() 
+    {
         return this.troupe_name;
     }
-    set troupeDuration(tDuration) {
-        this.troupe_duration = tDuration;
+
+    set troupeDuration(tDuration) 
+    {
+        if (tname.length > 3 && tname.length < 30)
+        {
+            this.troupe_duration = tDuration;
+        }
+        else
+        {
+            throw new Error('troupe minimum duration must be between 0.5 to 3 hours!');
+        }   
     }
     get troupeDuration() {
         return tDuration;
     }
 
-    set musicGenre(mGenre){
-        this.music_genre=mGenre;
+    set musicGenre(mGenre)
+    {
+        if(mGenre.toLowerCase()=="rock" || mGenre.toLowerCase()=="jazz" || mGenre.toLowerCase()=="pop")
+        {
+            this.music_genre=mGenre;
+        }   
     }
     get musicGenre()
     {
@@ -50,12 +72,12 @@ class Troupe {
                 if (this.troupeMusician[j-1].musicianName==Musician.musicianName && this.troupeMusician[j-1].instrumentalist==Musician.instrumentalist)
                 {
                     this.troupeMusician.pop(Musician)
-                    console.log("This musician already exists in the selected troupe")
+                    return("This musician already exists in the selected troupe")
                     return;
                 }
             }           
         }
-        console.log('Musician added successfully')
+        return('Musician added successfully')
         
     }
 
