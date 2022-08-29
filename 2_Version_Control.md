@@ -29,6 +29,14 @@ Version control software is a crucial component of the day-to-day professional a
 -	Offers the excellent git bash command-line tool.
 -	Provides a GIT GUI where you can easily re-scan, modify the status of the project, sign off, commit, and push the code with only a few clicks.
 
+#### To set your global username/email configuration:
+
+To set username:
+git config --global user.name "FIRST_NAME LAST_NAME"
+
+To set email address:
+git config --global user.email "MY_NAME@example.com"
+
 ### Cons
 -	Understanding a complex and larger history log is challenging.
 -	Does not allow the preservation of timestamps and keyword expansion.
